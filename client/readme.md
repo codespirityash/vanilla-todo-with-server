@@ -2,9 +2,15 @@
 
 This is where the frontend code exists
 
+
+### Getting Started 
+- Create a .env file in the client directory
+- Copy and paste everything from .env.example into the .env file
+- Then run this stuff:
+
 ```bash
 npm install # if you havent already
-npm run dev
+npm run dev # to start the dev server
 ```
 
 
