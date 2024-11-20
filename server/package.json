@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "dev": "nodemon --env-file=.env ./src/index.js"
+    "dev": "nodemon ./src/index.js"
   },
   "keywords": [],
   "author": "",
