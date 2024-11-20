@@ -1,0 +1,19 @@
+{
+  "name": "vanilla-todo-with-server",
+  "version": "1.0.0",
+  "description": "#### Setup Project",
+  "main": "index.js",
+  "scripts": {
+    "server:test": "cd server && npm test",
+    "client:install": "cd client && npm install",
+    "server:install": "cd server && npm install",
+    "install": "npm run client:install && npm run server:install",
+    "client:dev": "cd client && npm run dev",
+    "server:dev": "cd server && npm run dev",
+    "client:work": "code ./client",
+    "server:work": "code ./server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
