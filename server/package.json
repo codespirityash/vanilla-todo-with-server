@@ -2,9 +2,10 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "dev": "nodemon ./src/index.js"
   },
   "keywords": [],
   "author": "",
