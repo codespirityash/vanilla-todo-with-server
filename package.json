@@ -9,7 +9,7 @@
     "server:install": "cd server && npm install",
     "install": "npm run client:install && npm run server:install",
     "client:dev": "cd client && npm run dev",
-    "server:dev": "cd server && nodemon index.js",
+    "server:dev": "cd server && npm run dev",
     "client:work": "code ./client",
     "server:work": "code ./server"
   },
