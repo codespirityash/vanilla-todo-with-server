@@ -7,7 +7,35 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <header>
+        <h2>TO-DO APP WITH SERVER</h2>
+      </header>
+      <section id="Task-list">
+        <section class="item">
+          <div class="header"><h4>Task Title 1</h4></div>
+          <div class="content">Task description for Task 1</div>
+          <div class="footer">
+            <button id="edit">Edit</button>
+            <button id="remove">Remove</button>
+          </div>
+        </section>
+
+        <section class="item">
+          <div class="header"><h4>Task Title 2</h4></div>
+          <div class="content">Task description for Task 2</div>
+          <div class="footer">
+            <button id="edit">Edit</button>
+            <button id="remove">Remove</button>
+          </div>
+        </section>
+      </section>
+      <footer>
+        <input type="text" id="input" placeholder="What do you have in your mind?">
+        <button id="button">Add Task</button>
+      </footer>
+      </footer>
+    </div>
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>
