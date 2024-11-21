@@ -34,9 +34,13 @@ export class DOM {
         this.dom.append(val.dom)
         return this
     }
+    remove(){
+        this.dom.remove()
+        return this
+    }
     static fromDom(val){
         const d = new DOM()
-        d.dom = val
+        d.dom = document.querySelector(val)
         return d
     }
 }
