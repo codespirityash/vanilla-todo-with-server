@@ -1,3 +1,4 @@
+import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
 import DB from "./lib/DB.js";
@@ -5,7 +6,7 @@ import { generateId } from "./lib/utils.js";
 dotenv.config();
 const app = express();
 app.use(express.json());
-
+app.use(cors())
 const db = new DB("./data.json")
 app.get("/endpoints", (req, res) => {
     res.json({

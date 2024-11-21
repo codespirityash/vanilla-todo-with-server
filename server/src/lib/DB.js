@@ -25,6 +25,7 @@ export default class DB {
     update(id, item){   
         const data = this.read()
         const index = data.todos.findIndex((todo) => todo.id === id)
+        console.log(index)
         data.todos[index] = item
         fs.writeFileSync(this.name, JSON.stringify(data))
         return item
