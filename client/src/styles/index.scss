@@ -1,6 +1,109 @@
- 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+@import "./resets";
+@import "./variables";
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#app {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  background-color: $primary-color;
+  color: white;
+  padding: 20px;
+
+  h2 {
+    font-size: 24px;
+  }
+}
+
+#task-list {
+  margin: 20px 0;
+  height: 70%;
+  overflow-y: auto;
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $input-bg;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    .content {
+      flex-grow: 1;
+      font-size: 14px;
+    }
+
+    .footer {
+      display: flex;
+      gap: 5px;
+
+      button {
+        padding: 5px 10px;
+        font-size: 12px;
+        border: none;
+        border-radius: 3px;
+
+        &#complete {
+          background-color: $primary-color;
+          color: white;
+        }
+
+        &#remove {
+          background-color: $secondary-color;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: 0 auto;
+  background-color: $input-bg;
+  border-top: 1px solid $border-color;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    font-size: 14px;
+
+    &::placeholder {
+      color: $text-color;
+    }
+  }
+
+  button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
 }
