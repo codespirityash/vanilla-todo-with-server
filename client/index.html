@@ -4,19 +4,20 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="\src\styles\index.scss" />
     <title>Vite App</title>
   </head>
   <body>
     <div id="app">
       <header>
-        <h2>TO-DO APP WITH SERVER</h2>
+        <h2>TO-DO LIST WITH SERVER</h2>
       </header>
-      <section id="Task-list">
+      <section id="task-list">
         <section class="item">
           <div class="header"><h4>Task Title 1</h4></div>
           <div class="content">Task description for Task 1</div>
           <div class="footer">
-            <button id="edit">Edit</button>
+            <button id="complete">Complete</button>
             <button id="remove">Remove</button>
           </div>
         </section>
@@ -25,15 +26,14 @@
           <div class="header"><h4>Task Title 2</h4></div>
           <div class="content">Task description for Task 2</div>
           <div class="footer">
-            <button id="edit">Edit</button>
+            <button id="complete">Complete</button>
             <button id="remove">Remove</button>
           </div>
         </section>
       </section>
       <footer>
-        <input type="text" id="input" placeholder="What do you have in your mind?">
+        <input type="text" id="input" placeholder="What's on your mind?" />
         <button id="button">Add Task</button>
-      </footer>
       </footer>
     </div>
     <script type="module" src="./src/main.js"></script>
