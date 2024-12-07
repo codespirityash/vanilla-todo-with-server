@@ -1,10 +1,10 @@
-@import "./resets";
-@import "./variables";
+@use "./resets";
+@use "./variables";
 
 body {
   font-family: Arial, sans-serif;
-  background-color: $background-color;
-  color: $text-color;
+  background-color: variables.$background-color;
+  color: variables.$text-color;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@ body {
 
 header {
   text-align: center;
-  background-color: $primary-color;
+  background-color: variables.$primary-color;
   color: white;
   padding: 20px;
 
@@ -37,8 +37,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $input-bg;
-    border: 1px solid $border-color;
+    background-color: variables.$input-bg;
+    border: 1px solid variables.$border-color;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
@@ -59,12 +59,12 @@ header {
         border-radius: 3px;
 
         &#complete {
-          background-color: $primary-color;
+          background-color: variables.$primary-color;
           color: white;
         }
 
         &#remove {
-          background-color: $secondary-color;
+          background-color: variables.$secondary-color;
           color: white;
         }
       }
@@ -79,8 +79,8 @@ footer {
   right: 0;
   width: 80%;
   margin: 0 auto;
-  background-color: $input-bg;
-  border-top: 1px solid $border-color;
+  background-color: variables.$input-bg;
+  border-top: 1px solid variables.$border-color;
   padding: 10px;
   display: flex;
   gap: 10px;
@@ -88,17 +88,17 @@ footer {
   input[type="text"] {
     flex: 1;
     padding: 10px;
-    border: 1px solid $border-color;
+    border: 1px solid variables.$border-color;
     border-radius: 5px;
     font-size: 14px;
 
     &::placeholder {
-      color: $text-color;
+      color: variables.$text-color;
     }
   }
 
   button {
-    background-color: $primary-color;
+    background-color: variables.$primary-color;
     color: white;
     border: none;
     padding: 10px 15px;
