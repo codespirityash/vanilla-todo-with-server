@@ -1,0 +1,109 @@
+@use "./resets";
+@use "./variables";
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: variables.$background-color;
+  color: variables.$text-color;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#app {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  background-color: variables.$primary-color;
+  color: white;
+  padding: 20px;
+
+  h2 {
+    font-size: 24px;
+  }
+}
+
+#task-list {
+  margin: 20px 0;
+  height: 70%;
+  overflow-y: auto;
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: variables.$input-bg;
+    border: 1px solid variables.$border-color;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    .content {
+      flex-grow: 1;
+      font-size: 14px;
+    }
+
+    .footer {
+      display: flex;
+      gap: 5px;
+
+      button {
+        padding: 5px 10px;
+        font-size: 12px;
+        border: none;
+        border-radius: 3px;
+
+        &#complete {
+          background-color: variables.$primary-color;
+          color: white;
+        }
+
+        &#remove {
+          background-color: variables.$secondary-color;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: 0 auto;
+  background-color: variables.$input-bg;
+  border-top: 1px solid variables.$border-color;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid variables.$border-color;
+    border-radius: 5px;
+    font-size: 14px;
+
+    &::placeholder {
+      color: variables.$text-color;
+    }
+  }
+
+  button {
+    background-color: variables.$primary-color;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
